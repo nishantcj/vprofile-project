@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- azure-pipelines
+- vp-rem
 
 pool:
   vmImage: ubuntu-latest
@@ -26,7 +26,7 @@ steps:
     SonarCloud: 'Sonar Cloud'
     organization: 'az1'
     scannerMode: 'MSBuild'
-    projectKey: 'Azure Pipeline'
+    projectKey: 'az1_azure-pipelines'
 - task: SonarCloudAnalyze@1
 
 - task: SonarCloudPublish@1
