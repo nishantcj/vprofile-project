@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- vp-rem
+- azure-pipelines
 
 pool:
   vmImage: ubuntu-latest
@@ -20,12 +20,13 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonar Cloud'
     organization: 'az1'
-    scannerMode: 'Other'
-
+    scannerMode: 'MSBuild'
+    projectKey: 'Azure Pipeline'
 - task: SonarCloudAnalyze@1
 
 - task: SonarCloudPublish@1
