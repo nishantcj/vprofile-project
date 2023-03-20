@@ -28,6 +28,7 @@ steps:
     organization: 'az1'
     scannerMode: 'MSBuild'
     projectKey: 'az1_azure-pipelines'
+    projectName: 'Azure Pipeline'
 
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
