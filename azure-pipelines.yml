@@ -25,3 +25,9 @@ steps:
     SonarCloud: 'Sonar Cloud'
     organization: 'az1'
     scannerMode: 'Other'
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
